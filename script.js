@@ -43,7 +43,13 @@ document.getElementById("submitNumber").addEventListener("click", function() {
         document.getElementById("numberDiv").style.display = "none";
         document.getElementById("continueDiv").style.display = "block";
         document.getElementById("numberSuccess").style.display = "block";
-        document.getElementById("numberSuccess").innerHTML = "Congratulations! You entered a valid number.";
+        document.getElementById("numberSuccess").innerHTML = "Congratulations! You entered a valid number. Here is the number of pictures you wanted: ";
+        // Display images based on the entered number
+        document.getElementById("imageDisplay").innerHTML = '';
+        for(let i = 0; i < number; i++) {
+            document.getElementById("imageDisplay").innerHTML += '<img src="btc.png" alt="An image" style="width: 100px; height: 100px;">';
+        }
+        document.getElementById("imageDisplay").style.display = "block";
     } else {
         // If not, alert the user to enter a valid number.
         alert("Please enter a valid number between 1 and 10."); // Consider replacing this with a user-friendly error message within the modal
@@ -89,5 +95,12 @@ document.getElementById("finishButton").addEventListener("click", function() {
     document.getElementById("cityChoiceDiv").style.display = "none";
     document.getElementById("cityImage").style.display = "none";
     document.getElementById("finishButton").style.display = "none";
-    document.getElementById("startButton").style.display = "block";
+    document.getElementById("imageDisplay").style.display = "none";
+    document.getElementById("startButton").style.display = "none";
+    document.getElementById("startOverButton").style.display = "block";
+    
+});
+
+document.getElementById("startOverButton").addEventListener("click", function() {
+    location.reload(); // This will refresh the page.
 });
