@@ -61,6 +61,7 @@ document.getElementById("submitNumber").addEventListener("click", function() {
 // Add an event listener to the "yesButton" button that displays the city choice modal when clicked.
 document.getElementById("yesButton").addEventListener("click", function() {
     document.getElementById("continueDiv").style.display = "none";
+    document.getElementById("imageDisplay").style.display = "none";
     document.getElementById("cityChoiceDiv").style.display = "block";
 });
 
