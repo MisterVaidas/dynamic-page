@@ -10,12 +10,14 @@ let userName;
 
 // Add an event listener to the "startButton" button that displays the name input modal when clicked.
 document.getElementById("startButton").addEventListener("click", function() {
+    document.getElementById("startButton").style.display = "none"; // hide the start button
     document.getElementById("nameModal").style.display = "block";
 });
 
 // Add an event listener to the "submitName" button that stores the user's name when clicked,
 // displays a welcome message, and shows the number input modal.
 document.getElementById("submitName").addEventListener("click", function() {
+    document.getElementById("startButton").style.display = "none"; // hide start button
     // Get the user's name from the input field and assign it to the userName variable.
     userName = document.getElementById("nameInput").value;
     // Check if the user has entered a name.
@@ -52,7 +54,7 @@ document.getElementById("submitNumber").addEventListener("click", function() {
         document.getElementById("imageDisplay").style.display = "block";
     } else {
         // If not, alert the user to enter a valid number.
-        alert("Please enter a valid number between 1 and 10."); // Consider replacing this with a user-friendly error message within the modal
+        alert("Please enter a valid number between 1 and 10."); 
     }
 });
 
