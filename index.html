@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page</title>
+    <!--<script src="script.js"></script>-->
+</head>
+<body>
+    <h1 id="header">Hello, User!</h1>
+    <button id="startButton">Click here to start!</button>
+    <div id="nameModal" style="display: none;">
+        <p>Please enter your name:</p>
+        <input type="text" id="nameInput">
+        <button id="submitName">Submit</button>
+    </div>
+    <div id="numberDiv" style="display: none;">
+        <p>Please enter a number between 1 and 10:</p>
+        <input type="number" id="numberInput" min="1" max="10">
+        <button id="submitNumber">Submit</button>
+    </div>
+    <div id="continueDiv" style="display: none;">
+        <p id="numberSuccess" style="display: none;"></p> 
+        <p>Do you want to do anything else here?</p>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <div id="cityChoiceDiv" style="display: none;">
+        <p>Which city would you like to visit next?</p>
+        <select id="citySelect">
+            <option value="">--Please choose an option--</option>
+            <option value="london">London</option>
+            <option value="paris">Paris</option>
+            <option value="newYork">New York</option>
+        </select>
+        <button id="submitCity">Submit</button>
+    </div>
+    <img id="cityImage" style="display: none; width: 600px; height: 400px;">
+    <button id="finishButton" style="display: none;">Click here to finish</button>
+    <script src="script.js"></script>
+    
+</body>
+</html>
