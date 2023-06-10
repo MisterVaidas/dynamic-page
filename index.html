@@ -5,26 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
+    <!-- Display the main header. The content will change dynamically -->
     <h1 id="header">Hello, User!</h1>
+    <!-- Start button that the user can click to start the interactive process -->
     <button id="startButton">Click here to start!</button>
+    <!-- Modal for the user to enter their name. Initially hidden -->
     <div id="nameModal" style="display: none;">
         <p>Please enter your name:</p>
         <input type="text" id="nameInput">
         <button id="submitName">Submit</button>
     </div>
+     <!-- Div for the user to enter a number. Initially hidden -->
     <div id="numberDiv" style="display: none;">
         <p>Please enter a number between 1 and 10:</p>
         <input type="number" id="numberInput" min="1" max="10">
         <button id="submitNumber">Submit</button>
     </div>
+    <!-- Div asking the user if they want to continue. Initially hidden -->
     <div id="continueDiv" style="display: none;">
+         <!-- Paragraph to show the success message when a valid number is entered. Initially hidden -->
         <p id="numberSuccess" style="display: none;"></p> 
         <p>Do you want to do anything else here?</p>
         <button id="yesButton">Yes</button>
         <button id="noButton">No</button>
     </div>
+    <!-- Div for the user to choose a city. Initially hidden -->
     <div id="cityChoiceDiv" style="display: none;">
         <p>Which city would you like to visit next?</p>
         <select id="citySelect">
@@ -35,7 +44,9 @@
         </select>
         <button id="submitCity">Submit</button>
     </div>
+     <!-- Image to display the city chosen by the user. Initially hidden and sized to 600x400 pixels -->
     <img id="cityImage" style="display: none; width: 600px; height: 400px;">
+    <!-- Button for the user to finish the process. Initially hidden -->
     <button id="finishButton" style="display: none;">Click here to finish</button>
     <script src="script.js"></script>
     
